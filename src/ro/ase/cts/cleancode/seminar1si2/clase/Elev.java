@@ -1,0 +1,51 @@
+package ro.ase.cts.cleancode.seminar1si2.clase;
+
+import java.util.Arrays;
+
+public class Elev extends Aplicant{
+	private static int sumaFinantare=10;
+
+	public static void setSumaFinantare(int sumaFinantare) {
+		Elev.sumaFinantare = sumaFinantare;
+	}
+
+	private int clasa;
+	private String tutore;
+	
+	public int getClasa() {
+		return clasa;
+	}
+	public void setClasa(int i) {
+		this.clasa = i;
+	}
+	public String getTutore() {
+		return tutore;
+	}
+	public void setTutore(String tutore) {
+		this.tutore = tutore;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
+				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nrProiecte + ", DenumireProiect="
+				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+	}
+	
+	public Elev() {
+		super();
+	}
+	
+	public Elev(String nume, String prenume, int varsta, int punctaj,
+			int nr_proiecte, String[] denumireProiect, int clasa, String tutore) {
+		super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
+		this.clasa = clasa;
+		this.tutore = tutore;
+	}
+	
+	public void afisareFinantare() {
+		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+Elev.sumaFinantare+" Euro/zi in proiect.");
+	}
+	
+}
