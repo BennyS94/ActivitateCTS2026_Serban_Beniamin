@@ -1,4 +1,4 @@
-package ro.ase.cts.singleton.seminar3.clase;
+package ro.ase.cts.singleton.seminar3_lazy.clase;
 
 public class Hotel {
     private String denumireHotel;

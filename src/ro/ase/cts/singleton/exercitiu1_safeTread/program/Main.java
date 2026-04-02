@@ -1,4 +1,4 @@
-package ro.ase.cts.singleton.exercitiu1.program;
+package ro.ase.cts.singleton.exercitiu1_safeTread.program;
 
 
 //În cadrul companiei de transport în comun există un singur dispecerat central care coordonează în timp real
@@ -8,8 +8,15 @@ package ro.ase.cts.singleton.exercitiu1.program;
 // în același timp de mai mulți operatori. Dispeceratul central trebuie să permită înregistrarea unui mesaj de
 // circulație, afișarea ultimului mesaj transmis și trimiterea unei alerte generale către toate autobazele.
 
+import ro.ase.cts.singleton.exercitiu1_safeTread.clase.DispeceratCentral;
+
 public class Main {
     public static void main(String[] args) {
+        DispeceratCentral dispeceratCentral= DispeceratCentral.getInstance();
+        dispeceratCentral.setNumeDispecerat("STB 2");
+        dispeceratCentral.trimiteMesaj("Ajutor!!");
+        dispeceratCentral.trimiteAlertaGenerala();
 
+        System.out.println(dispeceratCentral);
     }
 }
